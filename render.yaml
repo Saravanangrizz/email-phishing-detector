@@ -10,7 +10,7 @@ services:
       - key: WEB_CONCURRENCY
         value: 1
 
-  - type: web service
+  - type: web 
     name: phishing-frontend
     env: static
     plan: free
