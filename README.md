@@ -10,9 +10,15 @@ A full-stack cybersecurity project that detects phishing emails using NLP-based 
 
 🚀 Deployed using Render
 
+
+
+
 🎯 Objective
 
 Detect phishing emails based on their content and header details, and help users understand why an email is flagged as phishing using natural language processing and keyword analysis.
+
+
+
 
 ✅ Features
 
@@ -30,6 +36,9 @@ Detect phishing emails based on their content and header details, and help users
 
 ->Handles imbalanced datasets using SMOTE or class_weight='balanced'
 
+
+
+
 📈 Prediction Output Displays:
 
 ->Prediction result (Phishing or Legit)
@@ -37,6 +46,9 @@ Detect phishing emails based on their content and header details, and help users
 ->Confidence score (e.g., "Phishing - 91.4% confident")
 
 ->Explanation of suspicious content (keywords, mismatch headers)
+
+
+
 
 🌐 Deployment
 
@@ -46,11 +58,16 @@ Detect phishing emails based on their content and header details, and help users
 
 ->Managed via a single render.yaml (monorepo structure)
 
+
+
 📁 Tech Stack
 
-  Layer	                        Technology
-Frontend               	  React, Tailwind CSS
-Backend                	  Flask, Gunicorn, CORS
-ML/NLP	                  transformers, BERT, sklearn, imbalanced-learn
-Model	                    RandomForestClassifier with BERT embeddings
-Deployment	              Render
+| Layer      | Technology                                      |
+| ---------- | ----------------------------------------------- |
+| Frontend   | React, Tailwind CSS                             |
+| Backend    | Flask, Gunicorn, CORS                           |
+| ML/NLP     | `transformers`, BERT, sklearn, imbalanced-learn |
+| Model      | RandomForestClassifier with BERT embeddings     |
+| Deployment | Render                                          |
+ 
+
