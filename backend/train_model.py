@@ -6,7 +6,8 @@ from transformers import DistilBertTokenizer, DistilBertModel
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-from imblearn.over_sampling import SMOTE
+from imblearn.over_sampling import RandomOverSampler
+#from imblearn.over_sampling import SMOTE
 
 # Load and preprocess data
 df = pd.read_csv('data/emails.csv')  # expects 'text','label','from','reply_to'
@@ -32,8 +33,8 @@ X = np.hstack([X_embeds, X_headers])
 y = df['label']
 
 # Handle imbalance
-sm = SMOTE(random_state=42,k_neighbors=1)
-X_res, y_res = sm.fit_resample(X, y)
+ros = RandomOverSampler(random_state=42)
+X_res, y_res = ros.fit_resample(X, y)
 
 # Train classifier with class weights
 clf = RandomForestClassifier(class_weight='balanced', n_estimators=100, random_state=42)
