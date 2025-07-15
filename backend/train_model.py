@@ -32,7 +32,7 @@ X = np.hstack([X_embeds, X_headers])
 y = df['label']
 
 # Handle imbalance
-sm = SMOTE(random_state=42)
+sm = SMOTE(random_state=42,k_neighbors=1)
 X_res, y_res = sm.fit_resample(X, y)
 
 # Train classifier with class weights
