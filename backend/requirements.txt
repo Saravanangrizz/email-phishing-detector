@@ -6,3 +6,5 @@ transformers
 scikit-learn
 imbalanced-learn
 gunicorn
+numpy
+pandas
