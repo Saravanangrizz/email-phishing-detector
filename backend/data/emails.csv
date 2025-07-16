@@ -1,0 +1,4 @@
+text,label,from,reply_to
+"Verify your account now",1,scam@phish.com,phisher@fake.com
+"Meeting schedule attached",0,boss@company.com,boss@company.com
+"Update your payment info",1,account@bank.com,secure@bank.com
