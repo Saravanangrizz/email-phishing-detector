@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 import joblib
 import torch
-from imblearn.over_sampling import RandomOverSampler
 from transformers import DistilBertTokenizer, DistilBertModel
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-from imblearn.over_sampling import SMOTE
+from imblearn.over_sampling import RandomOverSampler
+#from imblearn.over_sampling import SMOTE
 
 # Load and preprocess data
 df = pd.read_csv('data/emails.csv')  # expects 'text','label','from','reply_to'

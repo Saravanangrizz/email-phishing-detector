@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: phishing-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt 
+    startCommand: gunicorn app:app
+    rootDir: backend
+    envVars:
+      - key: WEB_CONCURRENCY
+        value: 1
+
+  - type: web 
+    name: phishing-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    rootDir: frontend
