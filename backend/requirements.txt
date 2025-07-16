@@ -1,7 +1,6 @@
 Flask
 flask-cors
 joblib
-torch
 transformers
 scikit-learn
 imbalanced-learn
